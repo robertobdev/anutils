@@ -1,12 +1,9 @@
 import { NgModule } from '@angular/core';
-import { AnutilsComponent } from './anutils.component';
-
-
+import { CpfMaskDirective } from './projects/anutils/directives/cpf-mask.directive';
 
 @NgModule({
-  declarations: [AnutilsComponent],
-  imports: [
-  ],
-  exports: [AnutilsComponent]
+  declarations: [CpfMaskDirective],
+  imports: [],
+  exports: [],
 })
-export class AnutilsModule { }
+export class AnutilsModule {}

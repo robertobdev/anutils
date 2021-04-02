@@ -7,8 +7,20 @@ import { ZipCodeMaskDirective } from './zip-code-mask/zip-code-mask.directive';
 import { ShimmerDirective } from './shimmer/shimmer.directive';
 
 @NgModule({
-  declarations: [CpfMaskDirective, CnpjMaskDirective, PhoneMaskDirective, ZipCodeMaskDirective, ShimmerDirective],
+  declarations: [
+    CpfMaskDirective,
+    CnpjMaskDirective,
+    PhoneMaskDirective,
+    ZipCodeMaskDirective,
+    ShimmerDirective,
+  ],
   imports: [CommonModule],
-  exports: [CpfMaskDirective],
+  exports: [
+    CpfMaskDirective,
+    CnpjMaskDirective,
+    PhoneMaskDirective,
+    ZipCodeMaskDirective,
+    ShimmerDirective,
+  ],
 })
 export class DirectivesModule {}

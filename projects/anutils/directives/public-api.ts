@@ -4,4 +4,4 @@ export * from './phone-mask/phone-mask.directive';
 export * from './zip-code-mask/zip-code-mask.directive';
 export * from './shimmer/shimmer.directive';
 export * from './shimmer/shimmer.interface';
-export * from './directives.module';
+export * from './anutils-directives.module';

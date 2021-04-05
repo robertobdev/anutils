@@ -11,8 +11,8 @@ import { IShimmer } from './shimmer.interface';
   selector: '[anutilsShimmer]',
 })
 export class ShimmerDirective implements OnChanges {
-  @Input() anutilsShimmer: boolean;
-  @Input() anutilsShimmerInfo: IShimmer;
+  @Input() anutilsShimmer: boolean = false;
+  @Input() anutilsShimmerInfo: IShimmer = { width: '0', height: '0' };
 
   @HostBinding('class.shimmer') get shimmer(): boolean {
     return this.anutilsShimmer;

@@ -23,4 +23,4 @@ import { ShimmerDirective } from './shimmer/shimmer.directive';
     ShimmerDirective,
   ],
 })
-export class DirectivesModule {}
+export class AnutilsDirectivesModule {}

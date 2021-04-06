@@ -1,4 +1,4 @@
-export declare class MenuItem {
+export interface MenuItem {
   title: string;
   link?: string;
   icon?: string;

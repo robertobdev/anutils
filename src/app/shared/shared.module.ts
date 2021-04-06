@@ -9,8 +9,11 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatCardModule } from '@angular/material/card';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
+import { CodeViewerComponent } from './components/code-viewer/code-viewer.component';
+import { MatTabsModule } from '@angular/material/tabs';
+import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
 @NgModule({
-  declarations: [],
+  declarations: [CodeViewerComponent],
   imports: [
     CommonModule,
     MatSidenavModule,
@@ -23,6 +26,8 @@ import { MatInputModule } from '@angular/material/input';
     FormsModule,
     ReactiveFormsModule,
     MatInputModule,
+    MatTabsModule,
+    HighlightModule,
   ],
   exports: [
     MatSidenavModule,
@@ -35,6 +40,17 @@ import { MatInputModule } from '@angular/material/input';
     FormsModule,
     ReactiveFormsModule,
     MatInputModule,
+    CodeViewerComponent,
+    MatTabsModule,
+    HighlightModule,
+  ],
+  providers: [
+    {
+      provide: HIGHLIGHT_OPTIONS,
+      useValue: {
+        fullLibraryLoader: () => import('highlight.js'),
+      },
+    },
   ],
 })
 export class SharedModule {}

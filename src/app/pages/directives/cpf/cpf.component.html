@@ -1,13 +1,17 @@
 <h1>API reference for Cpf Mask</h1>
 
-<code
-  >import {{ "{" }} MatExpansionModule {{ "}" }} from
-  '@angular/material/expansion</code
->
+<pre>
+  <code highlight="import {{ '{' }} AnutilsDirectivesModule  {{ '}' }} from 'anutils/directives';"></code>
+</pre>
 
-<form>
-  <mat-form-field>
-    <mat-label>Cpf</mat-label>
-    <input matInput placeholder="xxx.xxx.xxx-xx" anutilsCpfMask />
-  </mat-form-field>
-</form>
+<app-code-viewer [codeViewers]="codeViewers">
+  <div preview>
+    <form>
+      <h3>Input cpf mask</h3>
+      <mat-form-field>
+        <mat-label>Cpf</mat-label>
+        <input matInput placeholder="xxx.xxx.xxx-xx" anutilsCpfMask />
+      </mat-form-field>
+    </form>
+  </div>
+</app-code-viewer>

@@ -1,17 +1,23 @@
-<h1>API reference for Cnpj Mask</h1>
+<h1>API reference for Shimmer</h1>
 
 <pre>
   <code highlight="import {{ '{' }} AnutilsDirectivesModule  {{ '}' }} from 'anutils/directives';"></code>
 </pre>
 
-<div class="note">You have to import anutilsCss in your styles.scss</div>
+<blockquote>
+  <em>NOTE:</em> You have to import anutilsCss in your styles.scss. See more on <a href="https://github.com/robertobdev/anutils#readme" target="_blank">README.md</a>
+</blockquote>
 
 <app-code-viewer [codeViewers]="codeViewers">
-  <div preview class="preview" >
+  <div preview class="preview">
     <button mat-raised-button color="primary" (click)="handleFlag()">
       Enable/Disable shimmer
     </button>
-    <div [anutilsShimmer]="flag" [anutilsShimmerInfo]="shimmerInfo" class="shimmerContent">
+    <div
+      [anutilsShimmer]="flag"
+      [anutilsShimmerInfo]="shimmerInfo"
+      class="shimmerContent"
+    >
       Shimmer test!
     </div>
   </div>

@@ -17,17 +17,38 @@ export class ShimmerComponent implements OnInit {
     {
       title: 'Html',
       code: `
-      <form>
-        <h3>Input cnpj mask</h3>
-        <mat-form-field>
-          <mat-label>Cnpj</mat-label>
-          <input matInput placeholder="xx.xxx.xxx/xxxx-xx" anutilsCnpjMask />
-        </mat-form-field>
-      </form>`,
+    <div [anutilsShimmer]="flag" [anutilsShimmerInfo]="shimmerInfo">
+      Shimmer test!
+    </div>`,
     },
     {
       title: 'TS',
-      code: generateTSComponent('cnpjMask'),
+      code: `
+    import {Component} from '@angular/core';
+
+    @Component({
+      selector: 'shimmer-example',
+      templateUrl: 'shimmer-example.html',
+      styleUrls: ['shimmer-example.css'],
+    })
+    export class shimmerExample {
+      flag = true;
+      shimmerInfo = {
+        width: '400px',
+        height: '60px',
+      };
+    }
+  `,
+    },
+    {
+      title: 'styles.scss',
+      code: `
+        ...
+
+        @import 'anutils/directives/shimmer/shimmer.scss';
+
+        ...
+      `,
     },
   ];
 

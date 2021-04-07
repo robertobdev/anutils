@@ -27,3 +27,11 @@ h1.app-name {
 mat-sidenav {
   width: 14em;
 }
+
+a.mat-list-item{
+  color: #c8c8c8;
+}
+
+a.mat-list-item.is-active {
+  color: #012340;
+}

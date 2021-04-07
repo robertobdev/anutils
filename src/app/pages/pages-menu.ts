@@ -9,6 +9,22 @@ export const MENU_ITEMS: MenuItem[] = [
         title: 'Cpf Mask',
         link: '/directives/cpfmask',
       },
+      {
+        title: 'Cnpj Mask',
+        link: '/directives/cnpjmask',
+      },
+      {
+        title: 'Phone Mask',
+        link: '/directives/phonemask',
+      },
+      {
+        title: 'Shimmer',
+        link: '/directives/shimmer',
+      },
+      {
+        title: 'Zipcode Mask',
+        link: '/directives/zipcodemask',
+      },
     ],
   },
 ];

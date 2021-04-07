@@ -12,6 +12,7 @@
         <div *ngFor="let menu of menus">
           <h3>{{menu.title}}</h3>
           <a
+            mat-list-item
             routerLinkActive="is-active"
             *ngFor="let child of menu.children"
             [routerLink]="child.link"

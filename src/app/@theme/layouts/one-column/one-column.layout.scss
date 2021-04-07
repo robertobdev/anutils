@@ -27,9 +27,15 @@ h1.app-name {
 mat-sidenav {
   width: 14em;
 }
-
-a.mat-list-item{
-  color: #c8c8c8;
+h3 {
+  text-align: center;
+  font-size: 1.1em;
+  text-transform: uppercase;
+  margin: 0 0 0.5em;
+  color: #012340;
+}
+a.mat-list-item {
+  color: rgba(0, 0, 0, 0.65);
 }
 
 a.mat-list-item.is-active {

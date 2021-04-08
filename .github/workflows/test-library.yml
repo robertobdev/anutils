@@ -1,0 +1,23 @@
+name: Test Library
+
+on:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Setup Node.js
+        uses: actions/setup-node@v2.1.1
+        with:
+          node-version: '14'
+      - name: Install dependencies
+        run: npm install
+      - name: Test
+        run: npx ng test anutils --browsers=ChromeHeadlessNoSandbox --codeCoverage=true --watch=false
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v1
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          fail_ci_if_error: true

@@ -29,7 +29,8 @@ describe('ShimmerDirective', () => {
     });
     fixture = TestBed.createComponent(TestShimmerDirectiveComponent);
     component = fixture.componentInstance;
-    divNativeElement = fixture.debugElement.query(By.css('div')).nativeElement;
+    divNativeElement = fixture.debugElement.query(By.css('div'))
+      .nativeElement as HTMLDivElement;
   });
   it('should show the shimmer effect', () => {
     component.flag = true;
@@ -45,3 +46,4 @@ describe('ShimmerDirective', () => {
     void expect(divNativeElement.style.width).toBe('auto');
     void expect(divNativeElement.classList.item(0)).toBeNull();
   });
+});

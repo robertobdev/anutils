@@ -1,10 +1,4 @@
-import {
-  Directive,
-  HostBinding,
-  Input,
-  ElementRef,
-  OnChanges,
-} from '@angular/core';
+import { Directive, HostBinding, Input, OnChanges } from '@angular/core';
 import { IShimmer } from './shimmer.interface';
 
 @Directive({
@@ -17,15 +11,17 @@ export class ShimmerDirective implements OnChanges {
   @HostBinding('class.shimmer') get shimmer(): boolean {
     return this.anutilsShimmer;
   }
-  constructor(private el: ElementRef) {}
+
+  @HostBinding('style.width') width: string | undefined;
+  @HostBinding('style.height') height: string | undefined;
 
   ngOnChanges(): void {
     if (this.anutilsShimmer) {
-      this.el.nativeElement.style.width = this.anutilsShimmerInfo.width;
-      this.el.nativeElement.style.height = this.anutilsShimmerInfo.height;
+      this.width = this.anutilsShimmerInfo.width;
+      this.height = this.anutilsShimmerInfo.height;
     } else {
-      this.el.nativeElement.style.width = 'auto';
-      this.el.nativeElement.style.height = 'auto';
+      this.width = 'auto';
+      this.height = 'auto';
     }
   }
 }

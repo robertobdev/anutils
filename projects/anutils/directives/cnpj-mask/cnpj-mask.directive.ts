@@ -4,16 +4,18 @@ import { Directive, HostListener, ElementRef, OnInit } from '@angular/core';
   selector: '[anutilsCnpjMask]',
 })
 export class CnpjMaskDirective implements OnInit {
-  private previousValue: any = null;
+  private previousValue = '';
 
   constructor(private el: ElementRef) {}
+
   @HostListener('input')
   setMask(): void {
-    const mask = this.createMask(this.el.nativeElement.value);
-    if (this.el.nativeElement.value !== this.previousValue) {
-      this.el.nativeElement.value = mask;
+    const element = this.el.nativeElement as HTMLInputElement;
+    const mask = this.createMask(element.value);
+    if (element.value !== this.previousValue) {
+      element.value = mask;
       this.previousValue = mask;
-      this.el.nativeElement.dispatchEvent(new Event('input'));
+      element.dispatchEvent(new Event('input'));
     }
   }
 

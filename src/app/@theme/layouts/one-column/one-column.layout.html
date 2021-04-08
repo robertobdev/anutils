@@ -1,0 +1,30 @@
+<div class="container">
+  <mat-toolbar color="primary" class="toolbar">
+    <button mat-icon-button (click)="snav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <h1 class="app-name">Anutils</h1>
+  </mat-toolbar>
+
+  <mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #snav mode="side" opened>
+      <mat-nav-list>
+        <div *ngFor="let menu of menus">
+          <h3>{{menu.title}}</h3>
+          <a
+            mat-list-item
+            routerLinkActive="is-active"
+            *ngFor="let child of menu.children"
+            [routerLink]="child.link"
+            >{{child.title}}</a
+          >
+          <mat-divider></mat-divider>
+        </div>
+      </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+      <ng-content select="router-outlet"></ng-content>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

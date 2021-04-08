@@ -1,0 +1,11 @@
+<mat-tab-group animationDuration="0ms">
+  <mat-tab *ngFor="let codeViewer of codeViewers" [label]="codeViewer.title">
+    <pre>
+      <code [highlight]="codeViewer.code"   [lineNumbers]="true" class="content"></code>
+    </pre>
+  </mat-tab>
+</mat-tab-group>
+
+<div class="wrapper">
+  <ng-content select="[preview]"></ng-content>
+</div>

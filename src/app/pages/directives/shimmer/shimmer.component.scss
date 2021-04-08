@@ -1,0 +1,32 @@
+:host {
+  display: block;
+  padding: 20px;
+}
+app-code-viewer div button {
+  margin-bottom: 1em;
+}
+.preview {
+  background-color: white;
+  padding: 20px;
+}
+.shimmerContent {
+  width: 400px;
+  height: 60px;
+}
+
+blockquote {
+  padding: 12px;
+  margin: 0 15px 15px;
+  border-left: 3px rgb(83, 90, 96) solid;
+  color: rgb(83, 90, 96);
+}
+em {
+  font-weight: bolder;
+}
+a {
+  text-decoration: none;
+  color: rgb(53, 56, 58);
+}
+a:hover{
+   text-decoration: underline;
+}

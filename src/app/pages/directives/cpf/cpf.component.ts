@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { generateTSComponent } from 'src/app/shared/generateTSComponent';
 import { CodeViewer } from '../../../shared/interfaces/code-viewer.interface';
 @Component({
@@ -6,7 +6,7 @@ import { CodeViewer } from '../../../shared/interfaces/code-viewer.interface';
   templateUrl: './cpf.component.html',
   styleUrls: ['./cpf.component.scss'],
 })
-export class CpfComponent implements OnInit {
+export class CpfComponent {
   codeViewers: CodeViewer[] = [
     {
       title: 'Html',
@@ -24,8 +24,4 @@ export class CpfComponent implements OnInit {
       code: generateTSComponent('cpfMask'),
     },
   ];
-
-  constructor() {}
-
-  ngOnInit(): void {}
 }

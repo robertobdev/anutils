@@ -1,4 +1,4 @@
-import { Component, Input, OnDestroy } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { MenuItem } from 'src/app/shared/interfaces/menu.interface';
 
 @Component({
@@ -6,10 +6,6 @@ import { MenuItem } from 'src/app/shared/interfaces/menu.interface';
   templateUrl: './one-column.layout.html',
   styleUrls: ['./one-column.layout.scss'],
 })
-export class OneColumnLayoutComponent implements OnDestroy {
+export class OneColumnLayoutComponent {
   @Input() menus: MenuItem[] = [];
-
-  constructor() {}
-
-  ngOnDestroy(): void {}
 }

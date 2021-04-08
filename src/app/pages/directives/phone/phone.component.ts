@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { generateTSComponent } from 'src/app/shared/generateTSComponent';
 import { CodeViewer } from 'src/app/shared/interfaces/code-viewer.interface';
 
@@ -7,7 +7,7 @@ import { CodeViewer } from 'src/app/shared/interfaces/code-viewer.interface';
   templateUrl: './phone.component.html',
   styleUrls: ['./phone.component.scss'],
 })
-export class PhoneComponent implements OnInit {
+export class PhoneComponent {
   codeViewers: CodeViewer[] = [
     {
       title: 'Html',
@@ -25,8 +25,4 @@ export class PhoneComponent implements OnInit {
       code: generateTSComponent('phoneMask'),
     },
   ];
-
-  constructor() {}
-
-  ngOnInit(): void {}
 }

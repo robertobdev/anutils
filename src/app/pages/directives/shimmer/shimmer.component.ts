@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { generateTSComponent } from 'src/app/shared/generateTSComponent';
+import { Component } from '@angular/core';
 import { CodeViewer } from 'src/app/shared/interfaces/code-viewer.interface';
 
 @Component({
@@ -7,7 +6,7 @@ import { CodeViewer } from 'src/app/shared/interfaces/code-viewer.interface';
   templateUrl: './shimmer.component.html',
   styleUrls: ['./shimmer.component.scss'],
 })
-export class ShimmerComponent implements OnInit {
+export class ShimmerComponent {
   flag = true;
   shimmerInfo = {
     width: '400px',
@@ -57,8 +56,6 @@ export class ShimmerComponent implements OnInit {
       this.flag = false;
     }, 5000);
   }
-
-  ngOnInit(): void {}
 
   handleFlag(): void {
     this.flag = !this.flag;

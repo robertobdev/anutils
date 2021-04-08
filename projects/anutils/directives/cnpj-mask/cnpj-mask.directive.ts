@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unsafe-call */
-/* eslint-disable @typescript-eslint/no-unsafe-member-access */
 import { Directive, HostListener, ElementRef, OnInit } from '@angular/core';
 
 @Directive({

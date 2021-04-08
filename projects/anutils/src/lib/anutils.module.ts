@@ -1,8 +1,7 @@
 import { NgModule } from '@angular/core';
-import { CpfMaskDirective } from './projects/anutils/directives/cpf-mask.directive';
 
 @NgModule({
-  declarations: [CpfMaskDirective],
+  declarations: [],
   imports: [],
   exports: [],
 })

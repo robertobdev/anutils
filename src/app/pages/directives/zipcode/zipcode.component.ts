@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { generateTSComponent } from 'src/app/shared/generateTSComponent';
 import { CodeViewer } from 'src/app/shared/interfaces/code-viewer.interface';
 
@@ -7,7 +7,7 @@ import { CodeViewer } from 'src/app/shared/interfaces/code-viewer.interface';
   templateUrl: './zipcode.component.html',
   styleUrls: ['./zipcode.component.scss'],
 })
-export class ZipcodeComponent implements OnInit {
+export class ZipcodeComponent {
   codeViewers: CodeViewer[] = [
     {
       title: 'Html',
@@ -25,8 +25,4 @@ export class ZipcodeComponent implements OnInit {
       code: generateTSComponent('zipCodeMask'),
     },
   ];
-
-  constructor() {}
-
-  ngOnInit(): void {}
 }

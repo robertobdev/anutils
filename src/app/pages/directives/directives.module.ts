@@ -12,7 +12,14 @@ import { ShimmerComponent } from './shimmer/shimmer.component';
 import { ZipcodeComponent } from './zipcode/zipcode.component';
 
 @NgModule({
-  declarations: [CpfComponent, DirectivesComponent, CnpjComponent, PhoneComponent, ShimmerComponent, ZipcodeComponent],
+  declarations: [
+    CpfComponent,
+    DirectivesComponent,
+    CnpjComponent,
+    PhoneComponent,
+    ShimmerComponent,
+    ZipcodeComponent,
+  ],
   imports: [
     CommonModule,
     DirectivesRoutingModule,

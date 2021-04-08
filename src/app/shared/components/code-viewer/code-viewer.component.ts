@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CodeViewer } from '../../interfaces/code-viewer.interface';
 
 @Component({
@@ -6,10 +6,6 @@ import { CodeViewer } from '../../interfaces/code-viewer.interface';
   templateUrl: './code-viewer.component.html',
   styleUrls: ['./code-viewer.component.scss'],
 })
-export class CodeViewerComponent implements OnInit {
+export class CodeViewerComponent {
   @Input() codeViewers: CodeViewer[] = [];
-
-  constructor() {}
-
-  ngOnInit(): void {}
 }

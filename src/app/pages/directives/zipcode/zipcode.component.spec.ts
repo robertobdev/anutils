@@ -8,9 +8,8 @@ describe('ZipcodeComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ZipcodeComponent ]
-    })
-    .compileComponents();
+      declarations: [ZipcodeComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

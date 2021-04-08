@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { generateTSComponent } from 'src/app/shared/generateTSComponent';
 import { CodeViewer } from 'src/app/shared/interfaces/code-viewer.interface';
 
@@ -7,7 +7,7 @@ import { CodeViewer } from 'src/app/shared/interfaces/code-viewer.interface';
   templateUrl: './cnpj.component.html',
   styleUrls: ['./cnpj.component.scss'],
 })
-export class CnpjComponent implements OnInit {
+export class CnpjComponent {
   codeViewers: CodeViewer[] = [
     {
       title: 'Html',
@@ -25,8 +25,4 @@ export class CnpjComponent implements OnInit {
       code: generateTSComponent('cnpjMask'),
     },
   ];
-
-  constructor() {}
-
-  ngOnInit(): void {}
 }

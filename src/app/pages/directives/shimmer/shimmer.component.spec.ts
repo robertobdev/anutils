@@ -8,9 +8,8 @@ describe('ShimmerComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ShimmerComponent ]
-    })
-    .compileComponents();
+      declarations: [ShimmerComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

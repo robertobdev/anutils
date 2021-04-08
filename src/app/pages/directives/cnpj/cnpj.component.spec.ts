@@ -8,9 +8,8 @@ describe('CnpjComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CnpjComponent ]
-    })
-    .compileComponents();
+      declarations: [CnpjComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

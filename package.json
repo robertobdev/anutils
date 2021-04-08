@@ -5,8 +5,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "test": "ng test",
-    "test:lib": "ng test anutils",
+    "test": "ng test --watch=false --browsers=ChromeHeadless",
+    "test:lib": "ng test anutils --watch=false --browsers=ChromeHeadless",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "prepare": "husky install"

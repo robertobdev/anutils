@@ -1,6 +1,6 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-npx ng lint
-npx ng test
-npx ng test:lib
+npm run lint
+npm run test
+npm run test:lib

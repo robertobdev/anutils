@@ -115,7 +115,7 @@
     "anutils": {
       "projectType": "library",
       "root": "projects/anutils",
-      "sourceRoot": "projects/anutils/src",
+      "sourceRoot": "projects/anutils",
       "prefix": "lib",
       "architect": {
         "build": {

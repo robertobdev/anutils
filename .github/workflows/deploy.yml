@@ -19,6 +19,8 @@ jobs:
           cd dist/anutils
           npm version $RELEASE_VERSION
           npm config set //registry.npmjs.org/:_authToken=${NPM_TOKEN}
+          node -v
+          npm -v
           npm whoami
           npm publish --access public
         env:

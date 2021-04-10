@@ -27,7 +27,6 @@ jobs:
       - name: Publishing Anutils
         run: |
           cd dist/anutils
-          cat .npmrc
           npm config set //registry.npmjs.org/:_authToken=${NPM_TOKEN}
           npm version 0.0.22
           npm whoami

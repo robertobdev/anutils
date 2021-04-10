@@ -1,6 +1,6 @@
 {
   "name": "anutils",
-  "version": "0.0.22",
+  "version": "0.0.23",
   "author": "Roberto Barbosa <robertojf95@gmail.com>",
   "private": false,
   "peerDependencies": {

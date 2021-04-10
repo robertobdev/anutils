@@ -30,6 +30,14 @@ jobs:
           cat /home/runner/work/_temp/.npmrc
           npm -v
           echo ${NODE_AUTH_TOKEN}
+          echo TOKEN
+          echo ${RELEASE_VERSION}
+          echo TOKEN 2
+          echo ${token}
+          echo TOKEN 3
+          echo ${NODE_AUTH_TOKEN}
+          echo TOKEN 4
+          npm -v
           npm whoami
           npm publish --access public --verbose
         env:

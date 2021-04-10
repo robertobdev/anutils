@@ -10,7 +10,7 @@ import {
   selector: '[anutilsPhoneMask]',
 })
 export class PhoneMaskDirective implements OnInit {
-  @Input('anutilsPhoneMask') maskType: number | undefined;
+  @Input('anutilsPhoneMask') maskType: number | string | undefined;
   private previousValue = '';
 
   constructor(private el: ElementRef) {}

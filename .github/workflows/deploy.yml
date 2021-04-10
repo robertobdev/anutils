@@ -27,11 +27,9 @@ jobs:
       - name: Publishing Anutils
         run: |
           cd dist/anutils
-          npm info
           cat /home/runner/work/_temp/.npmrc
-          echo //registry.npmjs.org/:_authToken=$NPM_TOKEN > /home/runner/work/_temp/.npmrc
-          npm publish --access public --verbose
           npm whoami
+          npm publish --access public --verbose
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

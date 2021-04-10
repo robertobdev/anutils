@@ -12,10 +12,10 @@ jobs:
         run: echo ::set-output name=tag::${GITHUB_REF#refs/*/}
 
         # Setup .npmrc file to publish to npm
-      - uses: actions/setup-node@v1
+      - uses: actions/setup-node@v2
         with:
           always-auth: true
-          node-version: '12.19.0'
+          node-version: '14'
           registry-url: 'https://registry.npmjs.org'
 
       - name: Install Dependencies
@@ -27,8 +27,6 @@ jobs:
       - name: Publishing Anutils
         run: |
           cd dist/anutils
-          npm config set //registry.npmjs.org/:_authToken=${NPM_TOKEN}
-          npm version 0.0.22
           npm whoami
           npm publish --access public --verbose
         env:

@@ -28,6 +28,8 @@ jobs:
         run: |
           cd dist/anutils
           cat /home/runner/work/_temp/.npmrc
+          npm -v
+          echo ${NODE_AUTH_TOKEN}
           npm whoami
           npm publish --access public --verbose
         env:

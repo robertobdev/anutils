@@ -21,7 +21,22 @@ Install the dependencies
 $ npm i anutils
 ```
 
-
 [See our Demo](http://anutils.rb42.com.br)
 
 > //TODO Add demo print
+
+
+### Modules availables
+
+- Directive Module
+```typescript
+import { CommonModule } from '@angular/common';
+import { AnutilsDirectivesModule } from 'anutils/directives';
+
+@NgModule({
+  imports: [CommonModule, AnutilsDirectivesModule],
+  bootstrap: [App],
+  declarations: [App],
+})
+class AppModule {}
+```

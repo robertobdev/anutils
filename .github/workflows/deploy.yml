@@ -10,10 +10,6 @@ jobs:
       - name: Set Git Version
         id: vars
         run: echo ::set-output name=tag::${GITHUB_REF#refs/*/}
-      - uses: actions/setup-node@v2
-        with:
-          node-version: '12.x'
-          registry-url: 'https://registry.npmjs.org'
       - name: Install dependencies
         run: npm install
       - name: Build Anutils
@@ -22,8 +18,9 @@ jobs:
         run: |
           cd dist/anutils
           npm version $RELEASE_VERSION
+          npm set //registry.npmjs.org/:_authToken=$NPM_TOKEN
           npm whoami
-          npm publish --access public
+          npm publish --access public --ignore-scripts --@OWNER:registry='https://registry.npmjs.org'
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           RELEASE_VERSION: ${{ steps.vars.outputs.tag }}

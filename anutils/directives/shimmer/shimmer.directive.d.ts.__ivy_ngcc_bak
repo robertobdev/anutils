@@ -1,0 +1,10 @@
+import { OnChanges } from '@angular/core';
+import { IShimmer } from './shimmer.interface';
+export declare class ShimmerDirective implements OnChanges {
+    anutilsShimmer: boolean;
+    anutilsShimmerInfo: IShimmer;
+    get shimmer(): boolean;
+    width: string | undefined;
+    height: string | undefined;
+    ngOnChanges(): void;
+}

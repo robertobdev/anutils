@@ -1,0 +1,9 @@
+import { ElementRef, OnInit } from '@angular/core';
+export declare class CnpjMaskDirective implements OnInit {
+    private el;
+    private previousValue;
+    constructor(el: ElementRef);
+    setMask(): void;
+    ngOnInit(): void;
+    createMask(cnpj: string): string;
+}

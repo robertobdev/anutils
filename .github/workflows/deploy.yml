@@ -27,7 +27,7 @@ jobs:
       - name: Publishing Anutils
         run: |
           cd dist/anutils
-          npm version $RELEASE_VERSION
+          npm version 0.0.22
           npm publish --access public
         env:
           RELEASE_VERSION: ${{ steps.vars.outputs.tag }}

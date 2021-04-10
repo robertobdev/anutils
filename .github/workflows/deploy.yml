@@ -1,7 +1,9 @@
 name: Deploy
+
 on:
   release:
     types: [published]
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -10,16 +12,24 @@ jobs:
       - name: Set Git Version
         id: vars
         run: echo ::set-output name=tag::${GITHUB_REF#refs/*/}
-      - name: Install dependencies
+
+        # Setup .npmrc file to publish to npm
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Install Dependencies
         run: npm install
+
       - name: Build Anutils
         run: npx ng build anutils --prod
+
       - name: Publishing Anutils
         run: |
           cd dist/anutils
           npm version $RELEASE_VERSION
-          npm set //registry.npmjs.org/:_authToken $NPM_TOKEN
-          npm publish --access public --ignore-scripts --@OWNER:registry='https://registry.npmjs.org'
+          npm publish --access public
         env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           RELEASE_VERSION: ${{ steps.vars.outputs.tag }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

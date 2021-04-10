@@ -28,7 +28,8 @@ jobs:
         run: |
           cd dist/anutils
           npm info
-          echo //registry.npmjs.org/:_authToken=$NPM_TOKEN > ~/.npmrc
+          cat /home/runner/work/_temp/.npmrc
+          echo //registry.npmjs.org/:_authToken=$NPM_TOKEN > /home/runner/work/_temp/.npmrc
           npm publish --access public --verbose
           npm whoami
         env:

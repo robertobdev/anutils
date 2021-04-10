@@ -1,11 +1,21 @@
 {
   "name": "anutils",
   "version": "0.0.1",
+  "author": "Roberto Barbosa <robertojf95@gmail.com>",
+  "private": false,
   "peerDependencies": {
     "@angular/common": "^11.2.7",
     "@angular/core": "^11.2.7"
   },
   "dependencies": {
     "tslib": "^2.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/robertobdev/anutils.git",
+    "directory": "projects/anutils"
+  },
+  "bugs": {
+    "url": "https://github.com/robertobdev/anutils/issues"
   }
 }

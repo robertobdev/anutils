@@ -27,8 +27,11 @@ jobs:
       - name: Publishing Anutils
         run: |
           cd dist/anutils
+          cat .npmrc
+          npm config set //registry.npmjs.org/:_authToken=${NPM_TOKEN}
           npm version 0.0.22
-          npm publish --access public
+          npm whoami
+          npm publish --access public --verbose
         env:
           RELEASE_VERSION: ${{ steps.vars.outputs.tag }}
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

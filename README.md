@@ -21,7 +21,7 @@ Install the dependencies
 $ npm i anutils
 ```
 
-[See our Demo](http://anutils.rb42.com.br)
+[See our Demo](https://robertobdev.github.io/anutils/)
 
 > //TODO Add demo print
 

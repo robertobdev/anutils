@@ -1,5 +1,5 @@
 
-name: Deploy to GitHub Pages via angular-cli-ghpages
+name: Deploy Example App
 on:
   release:
     types: [published]

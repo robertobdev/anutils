@@ -1,8 +1,8 @@
 # Anutils
 
-![Deploy](https://github.com/robertobdev/anutils/workflows/Deploy/badge.svg)
-![Test](https://github.com/robertobdev/anutils/workflows/Test%20Library/badge.svg)
-![Lint](https://github.com/robertobdev/anutils/workflows/Lint/badge.svg)
+![Deploy Library](https://github.com/robertobdev/anutils/workflows/Deploy%20Library/badge.svg)
+![Deploy Example](https://github.com/robertobdev/anutils/workflows/Deploy%20Example%20App/badge.svg)
+![Test and Lint](https://github.com/robertobdev/anutils/workflows/Test%20and%20Lint/badge.svg)
 [![codecov](https://codecov.io/gh/robertobdev/anutils/branch/main/graph/badge.svg?token=HJ95O258W5)](https://codecov.io/gh/robertobdev/anutils)
 ![npm](https://img.shields.io/npm/dw/anutils)
 ![npm](https://img.shields.io/npm/v/anutils)

@@ -6,42 +6,17 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: Set Git Version
-        id: vars
-        run: echo ::set-output name=tag::${GITHUB_REF#refs/*/}
-
-        # Setup .npmrc file to publish to npm
-      - uses: actions/setup-node@v2
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
         with:
-          always-auth: true
-          node-version: '14'
-          registry-url: 'https://registry.npmjs.org'
-
+          node-version: 14
+          registry-url: https://registry.npmjs.org/
       - name: Install Dependencies
         run: npm install
-
       - name: Build Anutils
         run: npx ng build anutils --prod
-
       - name: Publishing Anutils
-        run: |
-          cd dist/anutils
-          cat /home/runner/work/_temp/.npmrc
-          npm -v
-          echo ${NODE_AUTH_TOKEN}
-          echo TOKEN
-          echo ${RELEASE_VERSION}
-          echo TOKEN 2
-          echo ${token}
-          echo TOKEN 3
-          echo ${NODE_AUTH_TOKEN}
-          echo TOKEN 4
-          npm -v
-          npm whoami
-          npm publish --access public --verbose
+        working-directory: dist/anutils
+        run: npm publish --access public --verbose
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-          token: ${{ secrets.NPM_TOKEN }}
-          RELEASE_VERSION: ${{ steps.vars.outputs.tag }}
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}

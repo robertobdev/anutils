@@ -10,10 +10,10 @@
       <h3>Input age required</h3>
       <mat-form-field>
         <mat-label>Age</mat-label>
-        <input matInput formControlName="age" required/>
-        <mat-error *ngIf="this.form.get('age')?.invalid">{{
-          this.form.get('age')?.errors?.message
-        }}</mat-error>
+        <input matInput formControlName="age" required />
+        <mat-error *ngIf="this.form.get('age')?.invalid"
+          >{{ this.form.get('age')?.errors?.message }}</mat-error
+        >
       </mat-form-field>
     </form>
   </div>

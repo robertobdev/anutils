@@ -15,9 +15,9 @@
           placeholder="example@mail.com"
           formControlName="email"
         />
-        <mat-error *ngIf="this.form.get('email')?.invalid">{{
-          this.form.get('email')?.errors?.message
-        }}</mat-error>
+        <mat-error *ngIf="this.form.get('email')?.invalid"
+          >{{ this.form.get('email')?.errors?.message }}</mat-error
+        >
       </mat-form-field>
     </form>
   </div>

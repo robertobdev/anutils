@@ -16,9 +16,9 @@
           anutilsCnpjMask
           formControlName="cnpj"
         />
-        <mat-error *ngIf="this.form.get('cnpj')?.invalid">{{
-          this.form.get('cnpj')?.errors?.message
-        }}</mat-error>
+        <mat-error *ngIf="this.form.get('cnpj')?.invalid"
+          >{{ this.form.get('cnpj')?.errors?.message }}</mat-error
+        >
       </mat-form-field>
     </form>
   </div>

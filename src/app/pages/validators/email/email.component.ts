@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { ValidateEmail } from 'projects/anutils/validators';
 import { generateTSComponent } from 'src/app/shared/generateTSComponent';

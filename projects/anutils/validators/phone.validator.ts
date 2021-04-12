@@ -92,6 +92,7 @@ export function ValidatePhone(control: AbstractControl): IValidator | null {
     if (parseInt(dddPhone) === ddd) {
       return ddd;
     }
+    return null;
   });
 
   if (!hasDDD.length) {

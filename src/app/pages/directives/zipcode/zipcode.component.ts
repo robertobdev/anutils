@@ -22,7 +22,7 @@ export class ZipcodeComponent {
     },
     {
       title: 'TS',
-      code: generateTSComponent('zipCodeMask'),
+      code: generateTSComponent({ componentName: 'zipCodeMask' }),
     },
   ];
 }

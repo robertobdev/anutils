@@ -44,6 +44,22 @@ export const MENU_ITEMS: MenuItem[] = [
         link: '/validators/phone',
       },
       {
+        title: 'Match Passwords',
+        link: '/validators/matchpasswords',
+      },
+      {
+        title: 'Date greater than',
+        link: '/validators/dategreaterthan',
+      },
+      {
+        title: 'Email',
+        link: '/validators/email',
+      },
+      {
+        title: 'Required',
+        link: '/validators/required',
+      },
+      {
         title: 'Zipcode',
         link: '/validators/zipcode',
       },

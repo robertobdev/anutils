@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { generateTSComponent } from 'src/app/shared/generateTSComponent';
 import { CodeViewer } from 'src/app/shared/interfaces/code-viewer.interface';
 
 @Component({
@@ -22,22 +23,14 @@ export class ShimmerComponent {
     },
     {
       title: 'TS',
-      code: `
-    import {Component} from '@angular/core';
-
-    @Component({
-      selector: 'shimmer-example',
-      templateUrl: 'shimmer-example.html',
-      styleUrls: ['shimmer-example.css'],
-    })
-    export class shimmerExample {
-      flag = true;
+      code: generateTSComponent({
+        componentName: 'shimmer',
+        componentCode: `  flag = true;
       shimmerInfo = {
         width: '400px',
         height: '60px',
-      };
-    }
-  `,
+      };`,
+      }),
     },
     {
       title: 'styles.scss',

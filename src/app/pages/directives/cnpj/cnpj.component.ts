@@ -22,7 +22,7 @@ export class CnpjComponent {
     },
     {
       title: 'TS',
-      code: generateTSComponent('cnpjMask'),
+      code: generateTSComponent({ componentName: 'cnpjMask' }),
     },
   ];
 }

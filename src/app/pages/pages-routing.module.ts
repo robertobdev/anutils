@@ -14,6 +14,13 @@ const routes: Routes = [
             (m) => m.DirectivesModule
           ),
       },
+      {
+        path: 'validators',
+        loadChildren: () =>
+          import('./validators/validators.module').then(
+            (m) => m.ValidatorsModule
+          ),
+      },
     ],
   },
 ];

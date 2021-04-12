@@ -1,0 +1,24 @@
+<h1>API reference for Email validator</h1>
+
+<pre>
+  <code highlight="/* Module
+  none */"></code>
+</pre>
+<app-code-viewer [codeViewers]="codeViewers">
+  <div preview>
+    <form [formGroup]="form">
+      <h3>Input email with validator</h3>
+      <mat-form-field>
+        <mat-label>Email</mat-label>
+        <input
+          matInput
+          placeholder="example@mail.com"
+          formControlName="email"
+        />
+        <mat-error *ngIf="this.form.get('email')?.invalid"
+          >{{ this.form.get('email')?.errors?.message }}</mat-error
+        >
+      </mat-form-field>
+    </form>
+  </div>
+</app-code-viewer>

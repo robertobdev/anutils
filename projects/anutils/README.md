@@ -1,24 +1,41 @@
 # Anutils
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.7.
+![Deploy Library](https://github.com/robertobdev/anutils/workflows/Deploy%20Library/badge.svg)
+![Deploy Example](https://github.com/robertobdev/anutils/workflows/Deploy%20Example%20App/badge.svg)
+![Test and Lint](https://github.com/robertobdev/anutils/workflows/Test%20and%20Lint/badge.svg)
+[![codecov](https://codecov.io/gh/robertobdev/anutils/branch/main/graph/badge.svg?token=HJ95O258W5)](https://codecov.io/gh/robertobdev/anutils)
+![npm](https://img.shields.io/npm/dw/anutils)
+![npm](https://img.shields.io/npm/v/anutils)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/robertobdev/anutils/compare)
 
-## Code scaffolding
+Anutils helps Angular developers code faster.
 
-Run `ng generate component component-name --project anutils` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project anutils`.
-> Note: Don't forget to add `--project anutils` or else it will be added to the default project in your `angular.json` file. 
+### Installation
 
-## Build
+Anutils requires [Node.js](https://nodejs.org/) v4+ to run.
 
-Run `ng build anutils` to build the project. The build artifacts will be stored in the `dist/` directory.
+Install the dependencies
 
-## Publishing
+```bash
+$ npm i anutils
+```
 
-After building your library with `ng build anutils`, go to the dist folder `cd dist/anutils` and run `npm publish`.
+[See our Demo](https://robertobdev.github.io/anutils/)
 
-## Running unit tests
+> //TODO Add demo print
 
-Run `ng test anutils` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Modules availables
 
-## Further help
+- Directive Module
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```typescript
+import { CommonModule } from '@angular/common';
+import { AnutilsDirectivesModule } from 'anutils/directives';
+
+@NgModule({
+  imports: [CommonModule, AnutilsDirectivesModule],
+  bootstrap: [App],
+  declarations: [App],
+})
+class AppModule {}
+```

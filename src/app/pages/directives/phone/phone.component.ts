@@ -22,7 +22,7 @@ export class PhoneComponent {
     },
     {
       title: 'TS',
-      code: generateTSComponent('phoneMask'),
+      code: generateTSComponent({ componentName: 'phoneMask' }),
     },
   ];
 }

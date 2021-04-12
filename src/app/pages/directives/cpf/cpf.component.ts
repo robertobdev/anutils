@@ -21,7 +21,7 @@ export class CpfComponent {
     },
     {
       title: 'TS',
-      code: generateTSComponent('cpfMask'),
+      code: generateTSComponent({ componentName: 'cpfMask' }),
     },
   ];
 }

@@ -1,0 +1,25 @@
+<h1>API reference for Cpf validator</h1>
+
+<pre>
+  <code highlight="/* Module
+  none */"></code>
+</pre>
+<app-code-viewer [codeViewers]="codeViewers">
+  <div preview>
+    <form [formGroup]="form">
+      <h3>Input cpf with validator</h3>
+      <mat-form-field>
+        <mat-label>Cpf</mat-label>
+        <input
+          matInput
+          placeholder="xxx.xxx.xxx-xx"
+          anutilsCpfMask
+          formControlName="cpf"
+        />
+        <mat-error *ngIf="this.form.get('cpf')?.invalid"
+          >{{ this.form.get('cpf')?.errors?.message }}</mat-error
+        >
+      </mat-form-field>
+    </form>
+  </div>
+</app-code-viewer>

@@ -1,0 +1,20 @@
+<h1>API reference for Age validator</h1>
+
+<pre>
+  <code highlight="/* Module
+  none */"></code>
+</pre>
+<app-code-viewer [codeViewers]="codeViewers">
+  <div preview>
+    <form [formGroup]="form">
+      <h3>Input age required</h3>
+      <mat-form-field>
+        <mat-label>Age</mat-label>
+        <input matInput formControlName="age" required />
+        <mat-error *ngIf="this.form.get('age')?.invalid"
+          >{{ this.form.get('age')?.errors?.message }}</mat-error
+        >
+      </mat-form-field>
+    </form>
+  </div>
+</app-code-viewer>

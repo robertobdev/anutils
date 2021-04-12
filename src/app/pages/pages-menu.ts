@@ -27,4 +27,34 @@ export const MENU_ITEMS: MenuItem[] = [
       },
     ],
   },
+  {
+    title: 'Validators',
+    icon: 'layout-outline',
+    children: [
+      {
+        title: 'Cpf',
+        link: '/validators/cpf',
+      },
+      {
+        title: 'Cnpj',
+        link: '/validators/cnpj',
+      },
+      {
+        title: 'Phone',
+        link: '/validators/phone',
+      },
+      {
+        title: 'Match Passwords',
+        link: '/validators/matchpasswords',
+      },
+      {
+        title: 'Email',
+        link: '/validators/email',
+      },
+      {
+        title: 'Required',
+        link: '/validators/required',
+      },
+    ],
+  },
 ];

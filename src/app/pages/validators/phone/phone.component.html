@@ -1,0 +1,25 @@
+<h1>API reference for Phone validator</h1>
+
+<pre>
+  <code highlight="/* Module
+  none */"></code>
+</pre>
+<app-code-viewer [codeViewers]="codeViewers">
+  <div preview>
+    <form [formGroup]="form">
+      <h3>Input phone with validator</h3>
+      <mat-form-field>
+        <mat-label>Phone</mat-label>
+        <input
+          matInput
+          placeholder="(xx) xxx-xxx-xxx"
+          anutilsPhoneMask
+          formControlName="phone"
+        />
+        <mat-error *ngIf="this.form.get('phone')?.invalid">{{
+          this.form.get('phone')?.errors?.message
+        }}</mat-error>
+      </mat-form-field>
+    </form>
+  </div>
+</app-code-viewer>

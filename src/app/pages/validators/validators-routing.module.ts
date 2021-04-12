@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CnpjComponent } from './cnpj/cnpj.component';
 
 import { CpfComponent } from './cpf/cpf.component';
 import { ValidatorsComponent } from './validators.component';
@@ -12,6 +13,10 @@ const routes: Routes = [
       {
         path: 'cpf',
         component: CpfComponent,
+      },
+      {
+        path: 'cnpj',
+        component: CnpjComponent,
       },
     ],
   },

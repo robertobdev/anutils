@@ -1,0 +1,25 @@
+<h1>API reference for Cnpj validator</h1>
+
+<pre>
+  <code highlight="/* Module
+  none */"></code>
+</pre>
+<app-code-viewer [codeViewers]="codeViewers">
+  <div preview>
+    <form [formGroup]="form">
+      <h3>Input cnpj with validator</h3>
+      <mat-form-field>
+        <mat-label>Cnpj</mat-label>
+        <input
+          matInput
+          placeholder="xx.xxx.xxx/xxxx-xx"
+          anutilsCnpjMask
+          formControlName="cnpj"
+        />
+        <mat-error *ngIf="this.form.get('cnpj')?.invalid">{{
+          this.form.get('cnpj')?.errors?.message
+        }}</mat-error>
+      </mat-form-field>
+    </form>
+  </div>
+</app-code-viewer>

@@ -6,9 +6,10 @@ import { CpfComponent } from './cpf/cpf.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { ValidatorsComponent } from './validators.component';
 import { AnutilsDirectivesModule } from 'projects/anutils/directives/anutils-directives.module';
+import { CnpjComponent } from './cnpj/cnpj.component';
 
 @NgModule({
-  declarations: [CpfComponent, ValidatorsComponent],
+  declarations: [CpfComponent, ValidatorsComponent, CnpjComponent],
   imports: [
     CommonModule,
     ValidatorsRoutingModule,

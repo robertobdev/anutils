@@ -2,9 +2,13 @@ import { AbstractControl } from '@angular/forms';
 import { IAbstractControlValidator } from './validators.interface';
 
 export function ValidateMatchPassword(
-  controlToCompare: AbstractControl
-): IAbstractControlValidator {
+  controlToCompare: AbstractControl | null
+): IAbstractControlValidator | null {
   let flagFirst = true;
+  if (!controlToCompare) {
+    return null;
+  }
+
   return (control: AbstractControl) => {
     if (flagFirst) {
       flagFirst = false;
@@ -12,7 +16,7 @@ export function ValidateMatchPassword(
         control.patchValue(control.value);
       });
     }
-    if (control.value !== controlToCompare.value) {
+    if (control.value !== '' && control.value !== controlToCompare.value) {
       return {
         validate: false,
         message:

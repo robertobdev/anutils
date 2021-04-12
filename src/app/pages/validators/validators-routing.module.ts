@@ -1,10 +1,24 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [];
+import { CpfComponent } from './cpf/cpf.component';
+import { ValidatorsComponent } from './validators.component';
+
+const routes: Routes = [
+  {
+    path: '',
+    component: ValidatorsComponent,
+    children: [
+      {
+        path: 'cpf',
+        component: CpfComponent,
+      },
+    ],
+  },
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class ValidatorsRoutingModule { }
+export class ValidatorsRoutingModule {}

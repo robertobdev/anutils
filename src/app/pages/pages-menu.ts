@@ -27,4 +27,26 @@ export const MENU_ITEMS: MenuItem[] = [
       },
     ],
   },
+  {
+    title: 'Validators',
+    icon: 'layout-outline',
+    children: [
+      {
+        title: 'Cpf',
+        link: '/validators/cpf',
+      },
+      {
+        title: 'Cnpj',
+        link: '/validators/cnpj',
+      },
+      {
+        title: 'Phone',
+        link: '/validators/phone',
+      },
+      {
+        title: 'Zipcode',
+        link: '/validators/zipcode',
+      },
+    ],
+  },
 ];

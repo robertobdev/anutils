@@ -3,7 +3,10 @@ import { RouterModule, Routes } from '@angular/router';
 import { CnpjComponent } from './cnpj/cnpj.component';
 
 import { CpfComponent } from './cpf/cpf.component';
+import { EmailComponent } from './email/email.component';
+import { MatchPasswordComponent } from './match-password/match-password.component';
 import { PhoneComponent } from './phone/phone.component';
+import { RequiredComponent } from './required/required.component';
 import { ValidatorsComponent } from './validators.component';
 
 const routes: Routes = [
@@ -22,6 +25,18 @@ const routes: Routes = [
       {
         path: 'phone',
         component: PhoneComponent,
+      },
+      {
+        path: 'matchpasswords',
+        component: MatchPasswordComponent,
+      },
+      {
+        path: 'email',
+        component: EmailComponent,
+      },
+      {
+        path: 'required',
+        component: RequiredComponent,
       },
     ],
   },

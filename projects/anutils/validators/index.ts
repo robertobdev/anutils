@@ -3,5 +3,4 @@ export * from './email.validator';
 export * from './phone.validator';
 export * from './required.validator';
 export * from './matchPassword.validator';
-export * from './dateGreaterThan.validator';
 export * from './cnpj.validator';

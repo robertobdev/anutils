@@ -12,6 +12,7 @@ import { MatInputModule } from '@angular/material/input';
 import { CodeViewerComponent } from './components/code-viewer/code-viewer.component';
 import { MatTabsModule } from '@angular/material/tabs';
 import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 @NgModule({
   declarations: [CodeViewerComponent],
   imports: [
@@ -28,6 +29,7 @@ import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
     MatInputModule,
     MatTabsModule,
     HighlightModule,
+    MatDatepickerModule,
   ],
   exports: [
     MatSidenavModule,
@@ -43,6 +45,7 @@ import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
     CodeViewerComponent,
     MatTabsModule,
     HighlightModule,
+    MatDatepickerModule,
   ],
   providers: [
     {
